@@ -1,0 +1,11 @@
+DROP PROCEDURE IF EXISTS pentity
+DELIMITER |
+CREATE PROCEDURE pentity(IN VENTITY VARCHAR(50))   
+BEGIN
+     INSERT INTO entity(id_entity,type_entity) VALUES (NULL,VENTITY);
+END|         
+
+DELIMITER ;
+CALL pentity("PERSONNE");
+CALL pentity("LIEU");
+

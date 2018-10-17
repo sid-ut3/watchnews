@@ -1,0 +1,10 @@
+DELIMITER |
+CREATE TRIGGER TPOS_TAGGING BEFORE INSERT
+ON POS_TAGGING FOR EACH ROW
+BEGIN
+    IF id_pos_tag IS  NULL   
+      THEN
+        SELECT'La clé ne doit pas etre nulle' ;
+    END IF;
+END |
+DELIMITER ;

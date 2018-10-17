@@ -1,0 +1,31 @@
+DELIMITER |
+
+CREATE TRIGGER TCOMMON  BEFORE INSERT
+ON common FOR EACH ROW
+
+BEGIN
+   
+	DECLARE nb1 INT;
+	DECLARE CLE_ETRANGERE CONDITION FOR SQLSTATE '99998';
+	DECLARE nb2 INT;
+	DECLARE CLE_ETRANGERE2 CONDITION FOR SQLSTATE '99999';
+
+	SELECT COUNT(S.id_synonym) INTO nb1
+	FROM synonym S
+	WHERE NEW.id_synonym IN (SELECT id_synonym FROM synonym);
+
+	IF (nb1 = 0)  THEN
+		SIGNAL CLE_ETRANGERE SET MESSAGE_TEXT = "SYNONYM's Foreign key does not exist";
+	END IF;
+	
+	SELECT COUNT(A.id_article) INTO nb2
+	FROM  article A
+	WHERE NEW.id_article IN (SELECT id_article FROM article);
+
+	IF (nb2 = 0)  THEN
+		SIGNAL CLE_ETRANGERE2 SET MESSAGE_TEXT = "Article's Foreign key does not exist";
+	END IF;
+
+END |
+
+DELIMITER ;

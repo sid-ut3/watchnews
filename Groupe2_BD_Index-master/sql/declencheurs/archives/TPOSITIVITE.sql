@@ -1,0 +1,10 @@
+DELIMITER |
+CREATE TRIGGER TPOSITIVITE BEFORE INSERT
+ON POSITIVITE FOR EACH ROW
+BEGIN
+    IF id_positivite IS  NULL   
+      THEN
+        SELECT'La clé ne doit pas etre nulle' ;
+    END IF;
+END |
+DELIMITER ;

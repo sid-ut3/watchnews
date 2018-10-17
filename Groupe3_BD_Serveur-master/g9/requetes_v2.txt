@@ -1,0 +1,157 @@
+Requêtes page recherche :
+
+par défaut on prend tous les thèmes ou sources
+
+requête 1
+envoi : 
+retour : tous les mots dans l'ordre alphabétique
+
+requête 2
+envoi : mot
+retour : recupérer le lien wiki si entité nommée sinon synonyme
+
+requête 3 #### peut etre article à la place des mots ??????? 
+envoi : mot + date * 2
+retour : scores des ressentis
+
+requête 4 
+envoi : mot + date * 2 + thème 
+retour : Fréquence d'apparition du mot par thème
+
+requête 5
+envoi : mot + date * 2 + source
+retour : Fréquence d'apparition du mot par source
+
+requête 6 #### ?
+envoi : mot + date*2 + periode + source 
+retour : effectif d'apparition du mot par source par periode
+
+requête 7 #### ?
+envoi : mot + date *2 + periode + thème 
+retour : effectif d'apparition du mot par periode par thème
+
+requête 8 #### no
+envoi : mot + date *2 + source 
+retour : 10 mots les plus associés à ce mot par rapport à la source demandée
+
+requête 9 #### non
+envoi : mot + date *2 + thème 
+retour : 10 mots les plus associés à ce mot par rapport au thème demandé
+
+requête 10
+envoi :
+retour : liste de toutes les sources
+
+Json :
+requête 3
+{
+	"1":{"feeling": "peur", "number": 10 },
+...
+	"7":{"feeling": "joie","number":15}
+   }
+
+   
+requête 4
+{
+   "1":{"theme":"La Dépêche", "number": 10 },
+   "2":{"theme":"Le Figaro", "number": 1 }
+   }
+
+   
+requête 5
+{
+   "1":{"source":"La Dépêche", "number": 10 },
+   "2":{"source":"Le Figaro", "number": 1 }
+   }
+
+   
+requête 6
+{
+   "1":{"period": "p1", "source":"La Dépêche", "number": 10 },
+   "2":{"period": "p1", "source":"Le Figaro", "number": 1 },
+   "3":{"period": "p2", "source":"La Dépêche", "number": 5 },
+   "4":{"period": "p2", "source":"Le Figaro", "number": 7 }
+}
+
+   
+requête 7
+{
+   "1":{"period": "p1", "theme":"La Dépêche", "number": 10 },
+   "2":{"period": "p1", "theme":"Le Figaro", "number": 1 }
+}
+
+
+requête 8
+{
+	"1":{"word" : "mot1", "number" : 10},
+	...
+	"10":{"word" : "mot10", "number" : 15}
+}
+
+
+requête 9
+{
+	"1":{"word" : "mot1", "number" : 10},
+	...
+	"10":{"word" : "mot10", "number" : 15}
+}
+
+requête 10
+{
+	"1":{"source": "Le Figaro"},
+	...
+}
+
+
+
+Requêtes page thème :
+
+par défaut 7 jours glissants
+
+requête 1
+envoi : 
+retour :tous les thèmes ordonnés par nombre d'articles croissants
+
+requête 2 ##### valentin ????
+envoi : thème
+retour : top 10 des mots les plus pertinents
+
+requête 3 ##### valentin ???
+envoi : thème 
+retour : verbe + nom + adjectif les plus liés au thème + leurs tendances
+
+Json :
+
+requête 1
+{
+	"1":{"theme": "international", "number": 1 },
+	...
+   }
+
+requête 2
+{
+	"1":{"theme": "_international", "weigth": 10 },
+	...
+	"10":{"theme": "_france","weigth":15}
+   }
+
+requête 3
+{
+   "1":{"verbe" : "manger", "trend" : "baisse"},
+   "2":{"noun" : "Trump", "trend" : "constant"},
+   "3":{"adjective" : "gros", "trend" : "hausse"}
+}
+
+
+
+Requêtes page accueil :
+
+requête 1
+envoi : 
+retour : ressenti de la polarité de l'ensemble des articles des 7 jours glissants ## positif ou negatif (table article)
+
+
+requête 1
+{
+	{"feeling" : "non grave", "pourcentage" : "10"}
+}

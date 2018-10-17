@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="author" content="ROY Thomas - DIAW Serigne - CLOCHARD Lucas"/>
+	<title id="theme_page">Thèmes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap/JQuery importation -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-2.5.0.css" type="text/css" media="screen">
+    <script  src="http://code.jquery.com/qunit/qunit-2.5.0.js"></script>
+</head>
+
+<body onLoad="start()">
+	<section id="title_section_theme">
+		<div class="container-fluid" id="container1_div_theme">
+			<h1 class="pol" align="center">Statistiques sur les thèmes</h1>
+			<div class="trait"></div></div>
+		</div>
+	</section>
+
+	<section id="stats_section_theme">
+		<div class="container-fluid" id="container3_div_theme">
+
+			<!-- First graph of the theme page (first loading page with no theme selected),
+			representing most treated theme during the last current week -->
+			<article class="row" id="most_treated_theme_article_theme">
+				<div id="text_graph1_div_theme" class="col-xs-12 text-center">
+					<h2 class="pol1">Diagrammme en barre des thèmes les plus traités de la semaine</h2>
+					<div id="graph1_div_theme">
+						<div id="series_chart_theme" class="block_bar_chart"></div>
+					</div>
+		 		</div>
+			</article>
+
+			<!-- Graph depending the selected theme by user,
+			corresponding to word cloud of 10 most treated words of the last current week.
+			Colours of the words indicate the trendency -->
+			<article class="row" id="most_treated_word_article_theme">
+        		<div id="text_graph2_div_theme" class="col-xs-12 text-center modal-bg hide">
+          			<h2 class="pol1">Nuage des mots les plus traités par semaine</h2>
+          			<!-- Word cloud -->
+            		<div id="graph2_div_theme">
+                		<div class="world_cloud_div_theme block_word_cloud"></div>
+                	</div>
+                	<!-- Legend indicating the relevant colour for each trendency -->
+                	<div id="table_legend">
+            			<table class="legend_wordcloud_table">
+                           <tr>
+                               <td class="td_legend_text">En très forte hausse</td>
+                               <td class="td_legend_text">En hausse</td>
+                               <td class="td_legend_text">Stagnante</td>
+                               <td class="td_legend_text">En baisse</td>
+                               <td class="td_legend_text">En très forte baisse</td>
+                           </tr>
+                           <tr>
+                               <td class="td1_legend"></td>
+                               <td class="td2_legend"></td>
+                               <td class="td3_legend"></td>
+                               <td class="td4_legend"></td>
+                               <td class="td5_legend"></td>
+                           </tr>
+                       </table>
+            		</div>
+            	</div>
+      		</article>
+
+      		<!--Other data depending on selected theme,
+      		corresponding to the verb, noun and adjective most associated
+      		with the selected theme and their tenancy-->
+			<article class="row" id="3_main_words_article_theme">
+				<div id="text_graph3_div_theme" class="col-xs-12 text-center">
+					<h2 class="pol1">Verbe, nom et adjectif les plus associés au thème et leur tendance</h2>
+					<div id="graph3_div_theme">
+						<div id="table_div"></div>
+					</div>
+		 		</div>
+			</article>
+
+		</div>
+	</section>
+
+<!-- Header and footer importation -->
+<script src="code/web/dynamic/fixed_header.js"></script>
+<script src="code/web/dynamic/header.js"></script>
+<script src="code/web/dynamic/footer.js"></script>
+
+<!-- Script CSS import for formatting tables and blocs -->
+<link rel="stylesheet" href="code/web/static/css/style.css">
+<link rel="stylesheet" href="code/web/static/css/style_cover.css">
+
+<!-- Scripts required to make word cloud (extracted from Github/Internet) -->
+<script src="code/web/dynamic/jqcloud-2.js"></script>
+<link rel="stylesheet" href="code/web/static/css/jqcloud.css" type="text/css" media="screen">
+
+<!-- Scripts required to make graphics gcharts from Google -->
+<script  src="https://www.gstatic.com/charts/loader.js"></script>
+<script  src="code/web/dynamic/gcharts.js"></script>
+
+</body>
+</html>

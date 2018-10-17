@@ -1,0 +1,104 @@
+/*Authors : ROY Thomas, DIAW Serigne, CLOCHARD Lucas, DIALLO Mamadou Yaya*/
+
+/*----------------------------|
+/---------INDEX PAGE----------|
+/----------------------------*/
+
+/*Formatting of the chart : TOP 10 Sources for the current week*/
+.block_top10{
+  max-width: 1000px;
+  height :400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*----------------------------|
+/---------THEME PAGE ---------|
+/----------------------------*/
+
+/*Formatting of the chart : Bar chart of the most trated themes for the current week*/
+
+.block_bar_chart{
+  width: 100%;
+  max-width: 650px;
+  height : 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+/*Formatting of the chart : Table of 3 mains keyword related to the chosen theme*/
+#table_div{
+  width: 100%;
+  max-width: 400px;
+  height : 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#table_legend {
+	margin-bottom:5%;
+}
+
+/*----------------------------|
+/---THEME AND INDEX PAGES ----|
+/----------------------------*/
+
+/*Formatting of the chart : Word Cloud*/
+.block_word_cloud{
+  width: 100%;
+  max-width: 600px;
+  height : 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Formatting of the legend for word cloud chart*/
+.legend_wordcloud_table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*1st color of the legend */
+.td1_legend{
+  width: 20%;
+  max-width: 200px;
+  height: 20px;
+  background: #32CD32;
+}
+/*2nd color of the legend */
+.td2_legend{
+  width: 20%;
+  max-width: 200px;
+  height: 20px;
+  background: #7FFF00;
+}
+/*3rd color of the legend */
+.td3_legend{
+  width: 20%;
+  max-width: 200px;
+  height: 20px;
+  background: #FFD700;
+}
+/*4th color of the legend */
+.td4_legend{
+  width: 20%;
+  max-width: 200px;
+  height: 20px;
+  background: #FF4500;
+}
+/*5th color of the legend */
+.td5_legend{
+  width: 20%;
+  max-width: 200px;
+  height: 20px;
+  background: #B22222;
+}
+/*formatting of the legend's text area*/
+.td_legend_text{
+  width: 20%;
+  max-width: 200px;
+  height: 20px;
+}

@@ -1,0 +1,70 @@
+/* police importée*/
+@font-face{
+	font-family: "Euroference";
+	src:url('https://www.dafont.com/fr/eurofurence.font?fpp=50&a=on') format("eurof35.ttf");
+}
+
+
+/*Taille et positionnement du logo*/
+.block_img{
+	float: inherit;
+	width:60px;
+	height:60px;
+}
+
+/*animation du bloc*/
+@keyframes black {
+    0% {
+    	background-color:black;
+    	color:white;
+        opacity:0.3;
+        position:relative;
+        z-index:4;
+    }
+    2%{
+    	background-color:black;
+    	color:white;
+        opacity:0.8;
+        position:relative;
+        z-index:4;
+    }
+}
+
+#center{
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+	float: inherit;
+}
+
+.block_img_middle{
+	width:60px;
+	height:60px;
+}
+
+/* Taille et positionnement du logo non-carré*/
+.block_img_middle_Tele{
+	margin-top: 4px;
+	width:60px;
+	height:60px;
+}
+
+.block_img_middle_Futura{
+	margin-top: 14px;
+	width:60px;
+	height:40px;
+}
+
+.block_img_middle_Hum{
+	margin-top: 22px;
+	width:60px;
+	height:20px;
+}
+
+.block_img_middle_Tri{
+	margin-top: 12px;
+	width:60px;
+	height:40px;
+}
+
+

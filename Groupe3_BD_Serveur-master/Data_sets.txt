@@ -1,0 +1,173 @@
+INSERT INTO entity VALUES (1, 'ebeh');
+INSERT INTO entity VALUES (2, 'gsyhj');
+INSERT INTO entity VALUES (3, 'sjc');
+INSERT INTO entity VALUES (4, 'sjq');
+INSERT INTO entity VALUES (5, 'nd');
+INSERT INTO entity VALUES (6, 'sjbnc');
+INSERT INTO entity VALUES (7, 'snbc');
+INSERT INTO entity VALUES (8, 'sjbc');
+INSERT INTO entity VALUES (9, 'sbc');
+INSERT INTO entity VALUES (10, 'snc');
+INSERT INTO synonym VALUES (1, 'boulet');
+INSERT INTO synonym VALUES (2, 'président');
+INSERT INTO synonym VALUES (3, 'amérique');
+INSERT INTO synonym VALUES (4, 'france');
+INSERT INTO synonym VALUES (5, 'guitare');
+INSERT INTO synonym VALUES (6, 'sanglier');
+INSERT INTO synonym VALUES (7, 'dinde');
+INSERT INTO synonym VALUES (8, 'voiture');
+INSERT INTO synonym VALUES (9, 'chameau');
+INSERT INTO synonym VALUES (10, 'neige');
+INSERT INTO wiki VALUES(1, 'sjf.fr');
+INSERT INTO wiki VALUES(2, 'ssfdf.fr');
+INSERT INTO wiki VALUES(3, 'sbc.fr');
+INSERT INTO wiki VALUES(4, 'def.fr');
+INSERT INTO wiki VALUES(5, 'ssprj.fr');
+INSERT INTO wiki VALUES(6, 'ssqlm.fr');
+INSERT INTO wiki VALUES(7, 'sszrt.fr');
+INSERT INTO wiki VALUES(8, 'xetl.fr');
+
+INSERT INTO wiki VALUES(9, 'sxre.fr');
+INSERT INTO wiki VALUES(10, 'prsm.fr');
+INSERT INTO label VALUES(1, 'politique');
+INSERT INTO label VALUES(2, 'sport');
+INSERT INTO label VALUES(3, 'musique');
+INSERT INTO label VALUES(4, 'culture');
+INSERT INTO label VALUES(5, 'santé');
+INSERT INTO pos_tagging VALUES(1, 'verbe');
+INSERT INTO pos_tagging VALUES(2, 'adjectif');
+INSERT INTO pos_tagging VALUES(3, 'nom');
+INSERT INTO author VALUES(1,"MEURDESOIF","JEAN");
+INSERT INTO author VALUES(2,"PROVISTE","ALAIN");
+INSERT INTO author VALUES(3,"VIVES","REMI");
+INSERT INTO author VALUES(4,"COURCI","SARAH");
+INSERT INTO author VALUES(5,"PTITPEU","JUSTIN");
+INSERT INTO author VALUES(6,"DANLMUR","ALPHONSE");
+INSERT INTO author VALUES(7,"BAMBELLE","LARRY");
+INSERT INTO author VALUES(8,"DEFESSE","RAY");
+INSERT INTO author VALUES(9,"KAN","JERRY");
+INSERT INTO author VALUES(10,"TABAC","BART");
+INSERT INTO newspaper VALUES(1,"le Monde","lien1","lien11");
+INSERT INTO newspaper VALUES(2,"la Depeche","lien2","lien22");
+INSERT INTO newspaper VALUES(3,"Nice Matin","lien3","lien33");
+INSERT INTO newspaper VALUES(4,"l'Equipe","lien4","lien44");
+INSERT INTO newspaper VALUES(5,"7 à Poitiers","lien5","lien55");
+INSERT INTO newspaper VALUES(6,"France Football","lien6","lien66");
+INSERT INTO newspaper VALUES(7,"Chalie Hebdo","lien7","lien77");
+INSERT INTO newspaper VALUES(8,"le Gorafi","lien8","lien88");
+INSERT INTO newspaper VALUES(9,"le Figaro","lien9","lien99");
+INSERT INTO newspaper VALUES(10,"la Croix","lien10","lien1010");
+INSERT INTO lemma VALUES (1, "sport");
+
+
+INSERT INTO lemma VALUES (2, "europe");
+
+
+INSERT INTO lemma VALUES (3, "amérique");
+
+
+INSERT INTO lemma VALUES (4, "france");
+
+
+INSERT INTO lemma VALUES (5, "président");
+
+
+INSERT INTO lemma VALUES (6, "décider");
+
+
+INSERT INTO lemma VALUES (7, "tweet");
+
+
+INSERT INTO lemma VALUES (8, "environnement");
+
+
+INSERT INTO lemma VALUES (9, "politique");
+
+INSERT INTO lemma VALUES (10, "élir");
+
+
+
+
+INSERT INTO word VALUES (1, "sportif", 1);
+
+
+INSERT INTO word VALUES (2, "tweeter", 7);
+
+
+INSERT INTO word VALUES (3, "éléction", 10);
+
+
+INSERT INTO word VALUES (4, "élu", 10);
+
+
+INSERT INTO word VALUES (5, "décision", 6);
+
+
+INSERT INTO word VALUES (6, "préside", 5);
+
+
+INSERT INTO word VALUES (7, "français", 4);
+
+
+INSERT INTO word VALUES (8, "environnementaux", 8);
+
+
+INSERT INTO word VALUES (9, "europe", 2);
+
+
+INSERT INTO word VALUES (10, "européen", 2);
+INSERT INTO article VALUES(1,"2018-01-03",0.2,0.5,0.12,0.8,0.87,0.52,0.35,0.51,1);
+INSERT INTO article VALUES(2,"2017-12-28",0.5,0.1,0.7,0.5,0.74,0.45,0.91,0.56,2);
+INSERT INTO article VALUES(3,"2017-11-13",0.9,0.1,0.5,0.1,0.65,0.78,0.90,0.78,2);
+INSERT INTO article VALUES(4,"2018-01-05",0.4,0.6,0.1,0.1,0.14,0.89,0.57,0.45,5);
+INSERT INTO article VALUES(5,"2018-01-08",0.6,0.8,0.2,0.6,0.89,0.32,0.56,0.46,7);
+INSERT INTO article VALUES(6,"2018-01-09",0.2,0.8,0.3,0.6,0.78,0.25,0.47,0.86,6);
+INSERT INTO article VALUES(7,"2017-11-29",0.3,0.8,0.5,0.8,0.48,0.69,0.45,0.48,10);
+INSERT INTO article VALUES(8,"2018-01-01",0.1,0.2,0.5,0.88,0.45,0.18,0.39,0.75,3);
+INSERT INTO article VALUES(9,"2018-01-01",0.1,0.6,0.9,0.98,0.56,0.17,0.36,0.74,8);
+INSERT INTO article VALUES(10,"2018-01-10",0.8,0.7,0.9,0.14,0.12,0.22,0.33,0.62,9);
+INSERT INTO belong VALUES (1,2);
+
+
+INSERT INTO belong VALUES (2,3);
+
+
+INSERT INTO belong VALUES (3,1);
+
+
+INSERT INTO belong VALUES (4,5);
+
+
+INSERT INTO belong VALUES (5,1);
+
+
+INSERT INTO belong VALUES (6,4);
+
+
+INSERT INTO belong VALUES (7,3);
+
+
+INSERT INTO belong VALUES (8,2);
+
+INSERT INTO belong VALUES (9,1);
+INSERT INTO belong VALUES (10,2);
+INSERT INTO position_word VALUES (1, 12, 1, 1, 2, 2, 3, 2, 2);
+INSERT INTO position_word VALUES (2, 82, 0, 4, 5, 2, 10, 1, 1);
+INSERT INTO position_word VALUES (3, 128, 0, 5, 4, 2, 5, 3, 5);
+INSERT INTO position_word VALUES (4, 121, 0, 2, 2, 2, 4, 9, 6);
+INSERT INTO position_word VALUES (5, 1, 1, 1, 7, 1, 3, 10, 9);
+INSERT INTO position_word VALUES (6, 97, 0, 1, 1, 3, 1, 4, 3);
+INSERT INTO position_word VALUES (7, 67, 0, 1, 5, 2 , 1, 7, 10);
+INSERT INTO position_word VALUES (8, 456, 0, 1, 10, 1, 3, 6, 9);
+INSERT INTO position_word VALUES (9, 167, 0, 1, 8, 2, 3, 2, 1);
+INSERT INTO position_word VALUES (10, 2, 1, 1, 2, 3, 3, 10, 4);
+INSERT INTO REALIZE VALUES(1,5);
+INSERT INTO REALIZE VALUES(10,8);
+INSERT INTO REALIZE VALUES(4,3);
+INSERT INTO REALIZE VALUES(2,10);
+INSERT INTO REALIZE VALUES(7,4);
+INSERT INTO REALIZE VALUES(3,7);
+INSERT INTO REALIZE VALUES(5,9);
+INSERT INTO REALIZE VALUES(6,6);
+INSERT INTO REALIZE VALUES(8,2);
+INSERT INTO REALIZE VALUES(9,1);

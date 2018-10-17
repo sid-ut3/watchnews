@@ -1,0 +1,31 @@
+DELIMITER |
+
+CREATE TRIGGER TBELONG  BEFORE INSERT
+ON belong FOR EACH ROW
+
+BEGIN
+   
+	DECLARE nb1 INT;
+	DECLARE CLE_ETRANGERE CONDITION FOR SQLSTATE '99998';
+	DECLARE nb2 INT;
+	DECLARE CLE_ETRANGERE2 CONDITION FOR SQLSTATE '99999';
+
+	SELECT COUNT(L.id_label) INTO nb1
+	FROM label L
+	WHERE NEW.id_label IN (SELECT id_label from label);
+
+	IF (nb1 = 0)  THEN
+		SIGNAL CLE_ETRANGERE SET MESSAGE_TEXT = "LABEL's Foreign key does not exist";
+	END IF;
+	
+	SELECT COUNT(AR.id_article) INTO nb2
+	FROM article AR
+	WHERE NEW.id_article IN (SELECT id_article from article);
+
+	IF (nb2 = 0)  THEN
+		SIGNAL CLE_ETRANGERE2 SET MESSAGE_TEXT = "ARTICLE's Foreign key does not exist";
+	END IF;
+
+END |
+
+DELIMITER ;
